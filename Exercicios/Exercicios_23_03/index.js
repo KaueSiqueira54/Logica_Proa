@@ -211,4 +211,28 @@ function soma() {
   }
 }
 
-soma();
+//13- Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é: F=(9*C+160) / 5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.  
+
+function temperatura() {
+  let temperaturaC = parseFloat(prompt("Digite a temperatura: "))
+  let conversaoF = (9 * temperaturaC + 160) / 5;
+  document.writeln(`A temperatura convertida é: ${conversaoF}`)
+}
+
+//14- Escreva um programa  que leia 10 números do usuário e calcule a soma desses números.  
+
+function lerNumeros() {
+  let numeros = [];
+  let soma;
+  for(i =0; i < 2; i++) {
+    let numero = Number(prompt(`Digite o número ${i+1}`))
+    numeros.push(numero);
+  }
+  
+  soma = numeros[i] + numeros[i];    
+
+  document.writeln(numeros)
+  document.writeln(soma);
+}
+
+lerNumeros();
