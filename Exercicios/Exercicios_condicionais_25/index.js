@@ -211,28 +211,182 @@ function soma() {
   }
 }
 
-//13- Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é: F=(9*C+160) / 5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.  
+//13- Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é: F=(9*C+160) / 5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.
 
 function temperatura() {
-  let temperaturaC = parseFloat(prompt("Digite a temperatura: "))
+  let temperaturaC = parseFloat(prompt("Digite a temperatura: "));
   let conversaoF = (9 * temperaturaC + 160) / 5;
-  document.writeln(`A temperatura convertida é: ${conversaoF}`)
+  document.writeln(`A temperatura convertida é: ${conversaoF}`);
 }
 
-//14- Escreva um programa  que leia 10 números do usuário e calcule a soma desses números.  
+//14- Escreva um programa  que leia 10 números do usuário e calcule a soma desses números.
 
 function lerNumeros() {
-  let numeros = [];
-  let soma;
-  for(i =0; i < 2; i++) {
-    let numero = Number(prompt(`Digite o número ${i+1}`))
-    numeros.push(numero);
+  let soma = 0;
+  for (i = 0; i < 10; i++) {
+    let numero = Number(prompt(`Digite o número ${i + 1}`));
+    soma += numero;
+    document.writeln(`Número ${i + 1}: ${numero} <br>`);
   }
-  
-  soma = numeros[i] + numeros[i];    
-
-  document.writeln(numeros)
-  document.writeln(soma);
 }
 
-lerNumeros();
+//15- Escreva um programa que leia a idade de 20 pessoas e exiba a soma das idades.
+
+function lerIdades() {
+  let soma = 0;
+  for (i = 0; i < 10; i++) {
+    let numero = Number(prompt(`Digite a idade ${i + 1}:`));
+    soma += numero;
+    document.writeln(`Idade ${i + 1}: ${numero} <br>`);
+  }
+
+  document.writeln(`A soma das idades é: ${soma}`);
+}
+
+//16- Escreva um programa que leia a idade de 20 pessoas e exiba a média das idades.
+
+function lerIdadesMedias() {
+  let soma = 0;
+  for (i = 0; i < 10; i++) {
+    let numero = Number(prompt(`Digite a idade ${i + 1}:`));
+    soma += numero;
+    document.writeln(`Idade ${i + 1}: ${numero} <br>`);
+  }
+
+  media = soma / 10;
+
+  document.writeln(`A soma das idades é: ${soma}<br>`);
+  document.writeln(`A média das idades é: ${media.toFixed(2)}`);
+}
+
+//17- Escreva um programa que leia a idade de 20 pessoas e exiba quantas pessoas são maiores de idade.
+
+function maiorIdade() {
+  let maiorIdade = [];
+
+  for (i = 0; i <= 20; i++) {
+    let idade = Number(prompt(`Digite a idade ${i + 1}: `));
+    if (idade >= 18) {
+      maiorIdade.push(idade);
+    }
+  }
+
+  document.writeln(`Pessoas maiores de idade: ${maiorIdade.length}`);
+}
+
+//18- Escreva um programa que leia o nome e a idade de 10 pessoas e exiba o nome da pessoa mais nova.
+
+function pessoaMaisNova() {
+  let nomeMaisNova;
+  let idadeMaisNova;
+
+  for (i = 0; i <= 10; i++) {
+    let nome = prompt("Digite o nome: ");
+    let idade = Number(prompt(`Digite a idade: `));
+    idadeMaisNova = idade;
+    nomeMaisNova = nome;
+    if (idade < idadeMaisNova) {
+      idadeMaisNova = idade;
+      nomeMaisNova = nome;
+    }
+  }
+
+  document.writeln(`Pessoa mais nova: ${nomeMaisNova} idade: ${idadeMaisNova}`);
+}
+
+//19- Elaborar um programa que efetue a apresentação do valor da conversão em real (R$) de um valor lido em dólar (	$). O programa deverá solicitar o valor da cotação do dólar e também a quantidade de dólares disponíveis com o usuário.
+
+function conversaoDolar() {
+  let cotacao = parseFloat(prompt("Digite a cotação do dólar: "));
+  let valor = parseFloat(prompt("Digite o valor em dólar: "));
+  let conversao = valor * cotacao;
+
+  document.writeln(`Cotação: ${cotacao.toFixed(2)}<br>`);
+  document.writeln(`Valor em dólar: ${valor.toFixed(2)}<br>`);
+  document.writeln(`Valor em real: ${conversao.toFixed(2)}<br>`);
+}
+
+//20- Escreva um programa que leia 20 números do usuário e exiba quantos números são maiores do que 8.
+
+function maioresQueOito() {
+  let numeros = [];
+  for (i = 0; i <= 20; i++) {
+    let numero = Number(prompt("Digite o número: "));
+    if (numero >= 8) {
+      numeros.push(numero);
+    }
+  }
+
+  document.writeln(`Números maiores que 8: ${numeros}`);
+}
+
+//21- A Loja Mamão com Açúcar está vendendo seus produtos em 5 (cinco) prestações sem juros. Faça um programa que receba um valor de uma compra e mostre o valor das prestações.
+
+function mamaoAcucar() {
+  let valorProduto = parseFloat(prompt("Digite o valor da compra: "));
+  let prestacoes = valorProduto / 5;
+
+  document.writeln(`O valor das 5 prestações são: ${prestacoes.toFixed(2)}`);
+}
+
+//22- Faça um programa que leia 20 números e, ao final, escreva quantos estão entre 0 e 100.
+
+function numerosEntreCem() {
+  let numeros = [];
+  let numerosMaiores = [];
+
+  for (index = 0; index < 2; index++) {
+    let numero = Number(prompt(`Digite o número ${index + 1}`));
+    if (numero >= 0 && numero <= 100) {
+      numeros.push(numero);
+    } else {
+      numerosMaiores.push(numero);
+    }
+  }
+
+  document.writeln(
+    `Números digitados maiores que 100 = [${numerosMaiores}]<br>`,
+  );
+  document.writeln(`Números digitados entre 0 e 100 = [${numeros}]`);
+}
+
+//23- Faça um programa que leia 20 números e, ao final, escreva quantos estão entre 0 e 100, quantos estão entre 101 e 200 e quantos são maiores de 200.
+
+function maioresQueCemE101() {
+  let numeros = [];
+  let numerosMaiores = [];
+
+  for (index = 0; index <= 20; index++) {
+    let numero = Number(prompt(`Digite o número ${index + 1}`));
+    if (numero >= 0 && numero <= 100) {
+      numeros.push(numero);
+    } else if (numero >= 101 && numero <= 200) {
+      numerosMaiores.push(numero);
+    }
+  }
+
+  document.writeln(`Números digitados entre 0 e 100 = [${numerosMaiores}]<br>`);
+  document.writeln(`Números digitados entre 101 e 200 = [${numeros}]`);
+}
+
+// 24- Escreva um programa que leia uma sequência de números do usuário e realize a soma desses números. Encerre a execução quando um número negativo for digitado.
+
+function somaAteNegativo() {
+  let numero = 1;
+  let soma = 0;
+  let numeros = [];
+  let count = 0;
+  while (numero > 0) {
+    numero = Number(prompt(`Digite um número (digite negativo para parar: )`));
+    count++;
+    if (numero < 0) {
+      document.writeln(`A soma dos números é: ${soma}`);
+      return;
+    }
+    numeros.push(numero);
+    document.writeln(`Números ${count}: ${numeros}<br>`);
+    soma += numero;
+  }
+}
+
+//25 é o mesmo que o 24 na lista
