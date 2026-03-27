@@ -8,6 +8,118 @@ corpo.style.fontFamily = "Verdana";
 
 // Exercicios Condicionais
 
+// 1
+
+function pratos() {
+  let prato = {
+    vegetariano: 180,
+    peixe: 230,
+    frango: 250,
+    carne: 350,
+  };
+
+  let sobremesa = {
+    abacaxi: 75,
+    sorvete_diet: 110,
+    mouse_diet: 170,
+    mouse_chocolate: 200,
+  };
+
+  let bebida = {
+    cha: 20,
+    suco_de_laranja: 70,
+    suco_de_melao: 100,
+    refrigerante_diet: 65,
+  };
+
+  let pratoUser = Number(
+    prompt(`Escolha o prato:
+    1 - Vegetariano
+    2 - Peixe
+    3 - Frango
+    4 - Carne`),
+  );
+
+  let sobremesaUser = Number(
+    prompt(`Escolha o prato:
+    1 - Abacaxi
+    2 - Sorvete diet
+    3 - Mouse diet
+    4 - Mouse chocolate`),
+  );
+
+  let bebidaUser = Number(
+    prompt(`Escolha o prato:
+    1 - Chá
+    2 - Suco de Laranja
+    3 - Suco de Melão
+    4 - Refrigerante diet`),
+  );
+
+  // Variáveis que vão guardar as calorias de cada escolha
+  let caloriaPrato = 0;
+  let caloriaSobremesa = 0;
+  let caloriaBebida = 0;
+
+  switch (pratoUser) {
+    case 1:
+      caloriaPrato = prato.vegetariano;
+      break;
+    case 2:
+      caloriaPrato = prato.peixe;
+      break;
+    case 3:
+      caloriaPrato = prato.frango;
+      break;
+    case 4:
+      caloriaPrato = prato.carne;
+      break;
+    default:
+      alert("Opção de prato inválida!");
+      return;
+  }
+
+  switch (sobremesaUser) {
+    case 1:
+      caloriaSobremesa = sobremesa.abacaxi;
+      break;
+    case 2:
+      caloriaSobremesa = sobremesa.sorvete_diet;
+      break;
+    case 3:
+      caloriaSobremesa = sobremesa.mouse_diet;
+      break;
+    case 4:
+      caloriaSobremesa = sobremesa.mouse_chocolate;
+      break;
+    default:
+      alert("Opção de sobremesa inválida!");
+      return;
+  }
+
+  switch (bebidaUser) {
+    case 1:
+      caloriaBebida = bebida.cha;
+      break;
+    case 2:
+      caloriaBebida = bebida.suco_de_laranja;
+      break;
+    case 3:
+      caloriaBebida = bebida.suco_de_melao;
+      break;
+    case 4:
+      caloriaBebida = bebida.refrigerante_diet;
+      break;
+    default:
+      alert("Opção de bebida inválida!");
+      return;
+  }
+
+  let totalCalorias = caloriaPrato + caloriaSobremesa + caloriaBebida;
+
+  document.writeln(`Total de calorias da refeição: ${totalCalorias} cal`);
+}
+
 // 02 - Escreva um programa em Javascript, que leia um número e informe se ele é divisível por 10, por 5 ou por 2 ou se não é divisível por nenhum deles.
 
 function divisivel() {
