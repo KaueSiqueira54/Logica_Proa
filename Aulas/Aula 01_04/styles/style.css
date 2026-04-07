@@ -1,0 +1,37 @@
+img {
+  width: 500px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+div {
+  width: 50%;
+  top: 700px;
+  left: 25%;
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 5px;
+  visibility: hidden; /* Ocultar as camadas, espaço permanece */
+}
+
+div img {
+  width: 500px;
+  height: 500px;
+  float: left;
+}
+
+#camada1 {
+  background-color: red;
+  color: #fff;
+}
+
+#camada2 {
+  background-color: green;
+  color: #000;
+}
+
+#camada3 {
+  background-color: blueviolet;
+  color: #fff;
+}
