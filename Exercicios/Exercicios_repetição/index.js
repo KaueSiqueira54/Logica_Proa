@@ -230,3 +230,5 @@ function digito() {
 
   document.writeln(num);
 }
+
+//
